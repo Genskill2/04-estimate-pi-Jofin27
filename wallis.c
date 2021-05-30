@@ -14,6 +14,7 @@ int main(void) {
       abort();
     }
   }
+  printf("pi=%f\n",pi);
 
   for (int i=500; i<3000; i++) {
     pi = wallis_pi(i);
@@ -22,5 +23,28 @@ int main(void) {
       abort();
     }
   }
+  printf("pi=%f\n",pi);
 }
+
+float wallis_pi(int x)
+{
+	int nr,dr;
+	nr=1;
+	dr=1;
+	double quo,req,pro;
+	quo=1.0;
+	pro=1.0;
+	for(int i=0;i<x;i++)
+	{
+		nr=(4*pow((i+1),2));
+		dr=((4*pow((i+1),2))-1);
+		quo=(float)nr/dr;
+		pro*=quo;
+	//printf("nr=%d\ndr=%d\nquo=%f\npro=%f\n",nr,dr,quo,pro);
+	}
+	req=2*pro;
+	//printf("req=%f\n",req);
+return req;
+}
+
 

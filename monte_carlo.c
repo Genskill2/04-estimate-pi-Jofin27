@@ -39,5 +39,24 @@ int main(void) {
   }
 }
 
+float mc_pi(int x)
+{	//printf("\niter=%d",x);
+	float xco,yco,pi;
+	int incir=0;
+	for(int i=0;i<x;i++)
+	{
+		xco=frandom();
+		yco=frandom();
+		//printf("x=%f\ty=%f\n",xco,yco);
+		float dist = sqrt(pow(xco,2)+pow(yco,2));
+		if(dist<=1.0)
+			incir++;
+	}
+	pi=4*((float)incir/(float)x);
+	//printf("\nincir=%d\tpi=%f",incir,pi);
+return pi;
+}
+
+
 
 
