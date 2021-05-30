@@ -14,7 +14,7 @@ int main(void) {
       abort();
     }
   }
-  printf("pi=%f\n",pi);
+  //printf("pi=%f\n",pi);
 
   for (int i=500; i<3000; i++) {
     pi = wallis_pi(i);
@@ -23,7 +23,7 @@ int main(void) {
       abort();
     }
   }
-  printf("pi=%f\n",pi);
+  //printf("pi=%f\n",pi);
 }
 
 float wallis_pi(int x)
